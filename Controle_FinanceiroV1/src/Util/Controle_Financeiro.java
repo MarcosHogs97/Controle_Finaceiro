@@ -1,5 +1,9 @@
 package Util;
-
+/*
+ * 	@autor
+ *	Marcos Henrique o. g. da Silva
+ *	Pablo Rodrigues de Oliveira
+ * **/
 import java.util.Scanner;
 
 public class Controle_Financeiro {
