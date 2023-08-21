@@ -4,24 +4,24 @@ import java.util.Scanner;
 
 public class Controle_Financeiro {
 	private double saldo;
-	private String produto;
-	private double valorProduto;
+	private String despesas;
+	private double valorDespesas;
 	
 	//get e set
 	public double getSaldo() {
 		return saldo;
 	}
 	public String getProduto() {
-		return produto;
+		return despesas;
 	}
 	public void setProduto(String produto) {
-		this.produto = produto;
+		this.despesas = produto;
 	}
 	public double getValor() {
-		return valorProduto;
+		return valorDespesas;
 	}
 	public void setValor(double valorProduto) {
-		this.valorProduto = valorProduto;
+		this.valorDespesas = valorProduto;
 	}
 	
 	//adicionar saldo
@@ -31,8 +31,8 @@ public class Controle_Financeiro {
 	
 	//construtor.
 	public Controle_Financeiro(String produto, double valorProduto, double saldo) {
-		this.produto = produto;
-		this.valorProduto = valorProduto;
+		this.despesas = produto;
+		this.valorDespesas = valorProduto;
 		this.saldo = saldo;
 	}
 	
@@ -42,7 +42,7 @@ public class Controle_Financeiro {
 		escolhaMenu = sc.nextInt();
 		switch (escolhaMenu) {
 		case 1:
-			System.out.print("Informe o valor que deseja Adicionar: ");
+			System.out.print("\nInforme o valor que deseja Adicionar: ");
 			double saldo = sc.nextDouble();
 			addSaldo(saldo);
 			informacaoSaldo();
@@ -50,8 +50,7 @@ public class Controle_Financeiro {
 			break;
 			
 		case 2:
-			cadastrarDespesa(sc);
-			novaCompra(sc);
+			cadastrarDespesa(sc);			
 			break;
 			
 		case 3:
@@ -61,11 +60,11 @@ public class Controle_Financeiro {
 			break;
 			
 		case 4:
-			System.out.println("Agradecemos por usar nossa aplicação!!");
+			System.out.println("\nAgradecemos por usar nossa aplicação!!");
 			break;
 			
 		default:
-			System.out.println("Informe um valor valido!!");
+			System.out.println("\nInforme um valor valido!!");
 			startAplication(sc);
 		}
 
@@ -87,7 +86,7 @@ public class Controle_Financeiro {
 	
 	public void cadastrarDespesa(Scanner sc) {
 		System.out.print("Informe a descrição da dispesa: ");
-		String despesa = sc.nextLine();
+		String despesa = sc.next();
 		setProduto(despesa);
 		
 		System.out.print("\nInforme o valor da dispesa: ");
@@ -98,11 +97,11 @@ public class Controle_Financeiro {
 	
 	public void validacao(Scanner sc) {
 		if(getSaldo() >= getValor()) {
-			saldo = saldo - valorProduto;
+			saldo = saldo - valorDespesas;
 			informacaoSaldo();
 			novaCompra(sc);
 		}else {
-			double diferenca =  valorProduto - saldo;
+			double diferenca =  valorDespesas - saldo;
 			System.out.println("Saldo insuficiente deposite R$ " + diferenca + " para realizar a compra");
 			informacaoSaldo();
 			startAplication(sc);
@@ -112,7 +111,7 @@ public class Controle_Financeiro {
 	
 	//metodo para exibir as informaçoes da conta.
 		public void informacaoSaldo() {
-			System.out.println("========= Dados Financeiros ==============");
+			System.out.println("\n========= Dados Financeiros ==============");
 			System.out.println(toString());
 			System.out.println("*===========================================*\n");
 		}
