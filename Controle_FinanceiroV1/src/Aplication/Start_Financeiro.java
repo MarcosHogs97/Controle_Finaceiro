@@ -1,5 +1,8 @@
 package Aplication;
-
+/*@autor
+*	Marcos Henrique o. g. da Silva
+*	Pablo Rodrigues de Oliveira
+**/
 import java.util.Scanner;
 
 import Util.Controle_Financeiro;
@@ -14,7 +17,6 @@ public class Start_Financeiro {
 		sc.close();
 	}
 	
-	//Marcos Henrique o. g. da Silva
-	//Pablo Rodrigues de Oliveira
+	
 
 }
