@@ -7,6 +7,13 @@ public class Controle_Financeiro {
 	private String despesas;
 	private double valorDespesas;
 	
+	//construtor.
+	public Controle_Financeiro(String produto, double valorProduto, double saldo) {
+			this.despesas = produto;
+			this.valorDespesas = valorProduto;
+			this.saldo = saldo;
+	}
+	
 	//get e set
 	public double getSaldo() {
 		return saldo;
@@ -27,13 +34,6 @@ public class Controle_Financeiro {
 	//adicionar saldo
 	public void addSaldo(double saldo) {
 		this.saldo += saldo;
-	}
-	
-	//construtor.
-	public Controle_Financeiro(String produto, double valorProduto, double saldo) {
-		this.despesas = produto;
-		this.valorDespesas = valorProduto;
-		this.saldo = saldo;
 	}
 	
 	public void startAplication(Scanner sc) {
