@@ -24,10 +24,10 @@ public class Controle_Financeiro {
 	public void setProduto(String produto) {
 		this.despesas = produto;
 	}
-	public double getValor() {
+	public double getValorDespesas() {
 		return valorDespesas;
 	}
-	public void setValor(double valorProduto) {
+	public void setValorDespesas(double valorProduto) {
 		this.valorDespesas = valorProduto;
 	}
 	
@@ -91,12 +91,12 @@ public class Controle_Financeiro {
 		
 		System.out.print("\nInforme o valor da dispesa: ");
 		double valorDespesa = sc.nextDouble();
-		setValor(valorDespesa);
+		setValorDespesas(valorDespesa);
 		validacao(sc);
 	}
 	
 	public void validacao(Scanner sc) {
-		if(getSaldo() >= getValor()) {
+		if(getSaldo() >= getValorDespesas()) {
 			saldo = saldo - valorDespesas;
 			informacaoSaldo();
 			novaCompra(sc);
