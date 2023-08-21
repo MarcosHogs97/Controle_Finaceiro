@@ -1,8 +1,9 @@
 package Aplication;
-/*@autor
-*	Marcos Henrique o. g. da Silva
-*	Pablo Rodrigues de Oliveira
-**/
+/*
+ * 	@autor
+ *	Marcos Henrique o. g. da Silva
+ *	Pablo Rodrigues de Oliveira
+ * **/
 import java.util.Scanner;
 
 import Util.Controle_Financeiro;
