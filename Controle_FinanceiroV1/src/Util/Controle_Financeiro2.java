@@ -46,8 +46,7 @@ public class Controle_Financeiro2 {
 	    int choice = JOptionPane.showOptionDialog(null, "Selecione uma opção", "Menu", JOptionPane.DEFAULT_OPTION,JOptionPane.DEFAULT_OPTION, null, options, null);
 		switch (choice) {
 		case 0:		
-			var saldoString = JOptionPane.showInputDialog("Informe o valor que deseja Adicionar");
-			double saldo = Double.parseDouble(saldoString);	
+			double saldo = Double.parseDouble(JOptionPane.showInputDialog("Informe o valor que deseja Adicionar",0));	
 			addSaldo(saldo);
 			String infrmacaoSaldo = toString();
 			JOptionPane.showMessageDialog(null,"Saldo inserido com sucesso\n" + infrmacaoSaldo);
